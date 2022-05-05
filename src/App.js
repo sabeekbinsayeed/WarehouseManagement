@@ -8,6 +8,7 @@ import Login from './components/Login/Login';
 import RequireAuth from './components/RequireAuth/RequireAuth';
 import DetailInventory from './components/DetailInventory/DetailInventory';
 import Header from './components/Header/Header';
+import ManageInventory from './components/ManageInventory/ManageInventory';
 
 function App() {
   return (
@@ -24,9 +25,15 @@ function App() {
             <DetailInventory />
           </RequireAuth>
         } />
+
+        <Route path="/manageinventories" element={
+          <RequireAuth>
+            <ManageInventory />
+          </RequireAuth>
+        } />
       </Routes>
 
-    </div>
+    </div >
   );
 }
 

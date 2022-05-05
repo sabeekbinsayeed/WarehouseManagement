@@ -1,14 +1,17 @@
 import { Button } from 'react-bootstrap';
 import React, { useEffect, useRef, useState } from 'react';
 import { Form } from 'react-bootstrap';
-import { useParams } from 'react-router-dom';
+import { Navigate, useNavigate, useParams } from 'react-router-dom';
 
 const DetailInventory = () => {
     const { productId } = useParams();
     const [pdetail, setPdetail] = useState([])
     const [quantity, setQuantity] = useState(0);
     const stockRef = useRef('')
-
+    const Navigate = useNavigate()
+    const handleNavigateManage = () => {
+        Navigate('/manageinventories');
+    }
     useEffect(() => {
         const url = `http://localhost:5000/products/${productId}`
         fetch(url).then(res => res.json()).then(data => {
@@ -92,6 +95,8 @@ const DetailInventory = () => {
                     Login
                 </Button>
             </Form>
+
+            <button onClick={handleNavigateManage}>manage inventories</button>
         </div>
     );
 };
