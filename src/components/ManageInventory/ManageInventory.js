@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Table } from 'react-bootstrap';
+import { useNavigate } from 'react-router-dom';
 import AllProduct from '../AllProduct/AllProduct';
 
 const ManageInventory = () => {
@@ -7,6 +8,11 @@ const ManageInventory = () => {
     useEffect(() => {
         fetch('http://localhost:5000/products').then(res => res.json()).then(data => setProducts(data))
     }, [])
+
+    const navigate = useNavigate();
+    const handleNavigateAdd = () => {
+        navigate('/addproduct');
+    }
 
     const handleDelete = id => {
         const proceed = window.confirm('sure?');
@@ -61,6 +67,7 @@ const ManageInventory = () => {
 
                 </tbody>
             </Table>
+            <button onClick={handleNavigateAdd}>add products</button>
 
 
         </div>
