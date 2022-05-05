@@ -1,0 +1,40 @@
+.product-info {
+    /* background-color: skyblue; */
+
+    margin: 40px;
+    position: relative;
+
+
+
+}
+
+
+
+
+
+
+.product-info img {
+    width: 100%;
+    margin: 15px auto;
+
+}
+
+.product-details {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+
+
+button {
+    padding-right: 30px;
+    padding-left: 30px;
+    Width: 100%;
+    Height:
+        48px
+}
+
+button:hover {
+    background-color: #ff4444;
+    color: white
+}

@@ -1,0 +1,6 @@
+.product-container {
+    background-color: rgba(128, 128, 128, 0.046);
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+
+}

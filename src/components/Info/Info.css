@@ -1,0 +1,10 @@
+.about {
+    color: white;
+    width: 200px;
+
+}
+
+.about:hover {
+
+    color: black;
+}
