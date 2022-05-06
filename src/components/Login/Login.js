@@ -9,8 +9,8 @@ import { useSendPasswordResetEmail } from 'react-firebase-hooks/auth';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Loading from '../Loading/Loading';
-import Social from '../Social/Social';
 
+import Social from '../Social/Social';
 const Login = () => {
     const emailRef = useRef('')
     const passRef = useRef('')

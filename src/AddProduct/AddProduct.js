@@ -1,6 +1,8 @@
 import { Button } from 'react-bootstrap';
 import React, { useRef } from 'react';
 import { Form } from 'react-bootstrap';
+import { useAuthState } from 'react-firebase-hooks/auth';
+import auth from '../firebase.init';
 
 const AddProduct = () => {
     // const { register, handleSubmit } = useForm();
@@ -10,6 +12,8 @@ const AddProduct = () => {
     const quantityRef = useRef('')
     const urlRef = useRef('')
     const desRef = useRef('')
+    const [user, loading] = useAuthState(auth)
+    console.log(user)
     const onSubmit = event => {
         event.preventDefault();
         const name = nameRef.current.value;
@@ -18,8 +22,10 @@ const AddProduct = () => {
         const supplier = priceRef.current.value;
         const des = desRef.current.value;
         const url = urlRef.current.value;
+        const email = user.email;
+        console.log(email)
 
-        const data = { name, price, quantity, des, supplier, url }
+        const data = { name, price, quantity, des, supplier, url, email }
 
         console.log(data)
         // send data to the server
