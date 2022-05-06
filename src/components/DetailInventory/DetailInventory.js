@@ -74,9 +74,23 @@ const DetailInventory = () => {
     }
     return (
         <div>
-            <h1>detail inventory </h1>
-            <p>{pdetail.name}</p>
-            <p>{quantity}</p>
+            <h1>Product Details Information </h1>
+
+            <div className='d-flex'>
+                <div>
+                    <img src={pdetail.img}></img>
+                </div>
+
+                <div>
+                    <h1>{pdetail.name}</h1>
+                    <h3>{pdetail.suplier}</h3>
+                    <h5>Price : {pdetail.price} Tk</h5>
+                    <p>{pdetail.quantity}</p>
+                    <p>{pdetail.description}</p>
+                </div>
+            </div>
+
+
 
             <button onClick={() => handleUpdate({ pdetail })}>Delivered</button>
 
