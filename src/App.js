@@ -10,6 +10,7 @@ import DetailInventory from './components/DetailInventory/DetailInventory';
 import Header from './components/Header/Header';
 import ManageInventory from './components/ManageInventory/ManageInventory';
 import AddProduct from './AddProduct/AddProduct';
+import Myitems from './components/Myitems/Myitems';
 
 function App() {
   return (
@@ -36,6 +37,12 @@ function App() {
         <Route path="/addproduct" element={
           <RequireAuth>
             <AddProduct />
+          </RequireAuth>
+        } />
+
+        <Route path="/myitems" element={
+          <RequireAuth>
+            <Myitems />
           </RequireAuth>
         } />
       </Routes>

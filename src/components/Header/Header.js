@@ -30,8 +30,8 @@ const Header = () => {
                             <Nav.Link style={{ color: ' #ff4444' }} git as={Link} to="about">About</Nav.Link>
                             {
                                 user && <>
-                                    <Nav.Link as={Link} to="manageservice">Manage</Nav.Link>
-                                    <Nav.Link as={Link} to="addservice">add</Nav.Link>
+                                    <Nav.Link as={Link} to="manageservice">My something</Nav.Link>
+                                    <Nav.Link as={Link} to="myitems">My items</Nav.Link>
 
                                 </>
                             }
