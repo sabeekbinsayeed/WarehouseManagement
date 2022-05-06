@@ -11,6 +11,7 @@ import Header from './components/Header/Header';
 import ManageInventory from './components/ManageInventory/ManageInventory';
 import AddProduct from './AddProduct/AddProduct';
 import Myitems from './components/Myitems/Myitems';
+import NotFound from './components/NotFound/NotFound';
 
 function App() {
   return (
@@ -45,6 +46,8 @@ function App() {
             <Myitems />
           </RequireAuth>
         } />
+
+        <Route path='*' element={<NotFound></NotFound>}></Route>
       </Routes>
 
     </div >

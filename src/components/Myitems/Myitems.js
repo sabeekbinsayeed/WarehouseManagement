@@ -55,7 +55,7 @@ const Myitems = () => {
 
                             <div className='w-50 mx-auto p-3 m-3' style={{ border: '2px solid red' }}>
                                 <h3>product name: {item.name}  </h3>
-                                <img src={item.img} ></img>
+
                                 <h5>supplier: {item.supplier}</h5>
                                 <p>quantity: {item.quantity}</p>
 
