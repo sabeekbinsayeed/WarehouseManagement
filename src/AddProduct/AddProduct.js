@@ -50,37 +50,37 @@ const AddProduct = () => {
             <Form onSubmit={onSubmit}>
                 <Form.Group className="mb-3" controlId="formBasicEmail">
                     <Form.Label>Name</Form.Label>
-                    <Form.Control ref={nameRef} type="text" placeholder="Enter stock" />
+                    <Form.Control ref={nameRef} type="text" placeholder="Enter Name" required />
 
                 </Form.Group>
 
                 <Form.Group className="mb-3" controlId="formBasicEmail">
-                    <Form.Label>Supplier</Form.Label>
-                    <Form.Control ref={supplierRef} type="text" placeholder="Enter stock" />
+                    <Form.Label ><bold>Supplier</bold></Form.Label>
+                    <Form.Control ref={supplierRef} type="text" placeholder="Enter Supplier" required />
 
                 </Form.Group>
 
                 <Form.Group className="mb-3" controlId="formBasicEmail">
-                    <Form.Label>price</Form.Label>
-                    <Form.Control ref={priceRef} type="text" placeholder="Enter stock" />
+                    <Form.Label>Price</Form.Label>
+                    <Form.Control ref={priceRef} type="text" placeholder="Enter Price" required />
 
                 </Form.Group>
 
                 <Form.Group className="mb-3" controlId="formBasicEmail">
-                    <Form.Label>quantity</Form.Label>
-                    <Form.Control ref={quantityRef} type="text" placeholder="Enter quantity" />
+                    <Form.Label>Quantity</Form.Label>
+                    <Form.Control ref={quantityRef} type="text" placeholder="Enter Quantity" required />
 
                 </Form.Group>
 
                 <Form.Group className="mb-3" controlId="formBasicEmail">
-                    <Form.Label>description</Form.Label>
-                    <Form.Control ref={desRef} type="text" placeholder="Enter desc" />
+                    <Form.Label>Description</Form.Label>
+                    <Form.Control ref={desRef} type="text" placeholder="Enter description" required />
 
                 </Form.Group>
 
                 <Form.Group className="mb-3" controlId="formBasicEmail">
                     <Form.Label>Image URL</Form.Label>
-                    <Form.Control ref={urlRef} value={"https://images.unsplash.com/photo-1603302576837-37561b2e2302?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTN8fGxhcHRvcHxlbnwwfHwwfHw%3D&w=1000&q=80"} type="text" placeholder="Enter quantity" />
+                    <Form.Control ref={urlRef} value={"https://images.unsplash.com/photo-1603302576837-37561b2e2302?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTN8fGxhcHRvcHxlbnwwfHwwfHw%3D&w=1000&q=80"} readonly type="url" placeholder="Enter quantity" required />
 
                 </Form.Group>
 
@@ -88,7 +88,11 @@ const AddProduct = () => {
                 {/* <Form.Group className="mb-3" controlId="formBasicCheckbox">
                     <Form.Check type="checkbox" label="Check me out" />
                 </Form.Group> */}
-                <Button type="submit">
+                {/* <Button type="submit">
+                    Add
+                </Button> */}
+
+                <Button type="submit" variant="danger w-50 mx-auto d-block mb-2 border" >
                     Add
                 </Button>
             </Form>

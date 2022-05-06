@@ -1,0 +1,14 @@
+.ware-button {
+    padding-right: 30px;
+    padding-left: 30px;
+
+    Height:
+        48px;
+
+}
+
+.ware-button:hover {
+
+    background-color: #ff4444;
+    color: white
+}

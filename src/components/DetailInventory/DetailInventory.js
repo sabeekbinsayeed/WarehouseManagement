@@ -62,7 +62,8 @@ const DetailInventory = () => {
     const handleSubmit = event => {
         event.preventDefault();
         const stock = stockRef.current.value;
-        const quantity = stock
+        const quantity1 = parseInt(stock) + parseInt(pdetail.quantity);
+        const quantity = quantity1 + ""
         //  const name = detail.pdetail.name
 
         const updatedProduct = { quantity };
@@ -73,44 +74,49 @@ const DetailInventory = () => {
 
     }
     return (
-        <div>
+        <div >
             <h1>Product Details Information </h1>
 
-            <div className='d-flex'>
+            <div className='d-flex' style={{ width: '80%', margin: 'auto', paddingTop: '30px' }}>
                 <div>
-                    <img src={pdetail.img}></img>
+                    <img style={{ width: '500px' }} src={pdetail.img}></img>
                 </div>
 
-                <div>
-                    <h1>{pdetail.name}</h1>
+                <div style={{ width: '400px', border: '2px solid black;', marginLeft: '100px' }}>
+                    <h1 className='text-danger'>{pdetail.name}</h1>
                     <h3>{pdetail.suplier}</h3>
                     <h5>Price : {pdetail.price} Tk</h5>
-                    <p>{pdetail.quantity}</p>
+                    <h5>Quantity: {pdetail.quantity}</h5>
                     <p>{pdetail.description}</p>
+                    <button className='ware-button' onClick={() => handleUpdate({ pdetail })}>Delivered</button>
+
+
                 </div>
             </div>
 
 
 
-            <button onClick={() => handleUpdate({ pdetail })}>Delivered</button>
 
-            <Form onSubmit={handleSubmit}>
-                <Form.Group className="mb-3" controlId="formBasicEmail">
-                    <Form.Label>Input stock</Form.Label>
-                    <Form.Control ref={stockRef} type="text" placeholder="Enter stock" />
+            <div className='mx-auto w-50 ' style={{ border: '2px solid red', padding: '60px', margin: '30px' }}>
+                <h3 className='text-danger'>Stock Quantities Form</h3>
+                <Form onSubmit={handleSubmit}>
+                    <Form.Group className="mb-3" controlId="formBasicEmail">
+                        <Form.Label className='text-danger'>Input stock</Form.Label>
+                        <Form.Control ref={stockRef} type="text" placeholder="Enter stock" />
 
-                </Form.Group>
+                    </Form.Group>
 
+                    <Button className='ware-button' variant=" w-50 mx-auto d-block mb-2 border" type="submit">
+                        Add new quantity
+                    </Button>
+                </Form>
+            </div>
 
-                {/* <Form.Group className="mb-3" controlId="formBasicCheckbox">
-                    <Form.Check type="checkbox" label="Check me out" />
-                </Form.Group> */}
-                <Button variant="primary w-50 mx-auto d-block mb-2" type="submit">
-                    Login
-                </Button>
-            </Form>
+            {/* <button className='ware-button' onClick={handleNavigateManage}>manage inventories</button> */}
 
-            <button onClick={handleNavigateManage}>manage inventories</button>
+            <Button onClick={handleNavigateManage} variant="danger w-50 mx-auto d-block mb-2 border" >
+                Manage Inventories
+            </Button>
         </div>
     );
 };

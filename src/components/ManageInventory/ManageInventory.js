@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Table } from 'react-bootstrap';
+import { Button, Table } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
 import AllProduct from '../AllProduct/AllProduct';
 
@@ -67,7 +67,11 @@ const ManageInventory = () => {
 
                 </tbody>
             </Table>
-            <button onClick={handleNavigateAdd}>add products</button>
+            {/* <button onClick={handleNavigateAdd}>add products</button> */}
+
+            <Button onClick={handleNavigateAdd} type="submit" variant="danger w-50 mx-auto d-block mb-2 border" >
+                Add
+            </Button>
 
 
         </div>

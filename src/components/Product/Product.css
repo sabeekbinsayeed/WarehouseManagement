@@ -24,17 +24,17 @@
     padding-right: 15px;
 }
 
-
-
-button {
+.ware-button {
     padding-right: 30px;
     padding-left: 30px;
     Width: 100%;
     Height:
-        48px
+        48px;
+
 }
 
-button:hover {
+.ware-button:hover {
+
     background-color: #ff4444;
     color: white
 }

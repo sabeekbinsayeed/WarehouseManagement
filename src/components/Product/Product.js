@@ -26,7 +26,7 @@ const Product = props => {
 
             </div>
             <div className="btn-container">
-                <button onClick={() => { handleNavigation(_id) }}><p>Manage Product</p></button>
+                <button className='ware-button' onClick={() => { handleNavigation(_id) }}><p>Manage Product</p></button>
             </div>
 
         </div>
