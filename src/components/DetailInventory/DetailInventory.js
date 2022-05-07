@@ -13,7 +13,7 @@ const DetailInventory = () => {
         Navigate('/manageinventories');
     }
     useEffect(() => {
-        const url = `http://localhost:5000/products/${productId}`
+        const url = `https://arcane-plateau-22519.herokuapp.com/products/${productId}`
         fetch(url).then(res => res.json()).then(data => {
             setPdetail(data)
             setQuantity(pdetail.quantity)
@@ -39,7 +39,7 @@ const DetailInventory = () => {
     }
 
     const handleNumber = (updatedProducts, quantity) => {
-        const url = `http://localhost:5000/products/${pdetail._id}`;
+        const url = `https://arcane-plateau-22519.herokuapp.com/products/${pdetail._id}`;
         console.log(url)
         fetch(url, {
             method: 'PUT',

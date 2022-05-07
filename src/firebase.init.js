@@ -12,6 +12,12 @@ const firebaseConfig = {
     storageBucket: "warehouse-68196.appspot.com",
     messagingSenderId: "519054096006",
     appId: "1:519054096006:web:1380aeb36104f2188ec307"
+    // apiKey: process.env.REACT_APP_apiKey,
+    // authDomain: process.env.REACT_APP_authDomain,
+    // projectId: process.env.REACT_APP_projectId,
+    // storageBucket: process.env.REACT_APP_storageBucket,
+    // messagingSenderId: process.env.REACT_APP_messagingSenderId,
+    // appId: process.env.REACT_APP_appId
 };
 
 // Initialize Firebase

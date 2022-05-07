@@ -29,7 +29,7 @@ const AddProduct = () => {
 
         console.log(data)
         // send data to the server
-        fetch('http://localhost:5000/products/', {
+        fetch('https://arcane-plateau-22519.herokuapp.com/products/', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

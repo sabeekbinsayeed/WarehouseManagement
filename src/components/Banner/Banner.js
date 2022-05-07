@@ -5,7 +5,7 @@ const Banner = () => {
     return (
         <div className='banner'>
             <h1 className='white'>We store Your favourite laptops, mobiles and gadgets</h1>
-            <button className='button'>Read Blogs</button>
+            <button className='button py-2 px-1'>Read Blogs</button>
 
 
         </div>

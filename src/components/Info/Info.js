@@ -14,7 +14,7 @@ const Info = () => {
                     <h1>At tech stock, we are transforming warehouses and distribution centers to drive value and customer satisfaction.</h1>
                     <p className='mt-3'>Get ahead of challenges with flexible warehousing and distribution solutions to meet your customers demands. At Ryder, our industry-leading solutions include dedicated and multiclient warehousing, process engineering for continuous improvement, facility design, equipment, labor management, automation technology, and visibility tools to help you improve efficiency and optimize your operations.</p>
 
-                    <button className='about bg-danger'>About us</button>
+                    <button className='py-2 about bg-danger'>About us</button>
                 </div>
             </div>
 

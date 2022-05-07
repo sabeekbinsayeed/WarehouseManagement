@@ -6,7 +6,7 @@ import AllProduct from '../AllProduct/AllProduct';
 const ManageInventory = () => {
     const [products, setProducts] = useState([])
     useEffect(() => {
-        fetch('http://localhost:5000/products').then(res => res.json()).then(data => setProducts(data))
+        fetch('https://arcane-plateau-22519.herokuapp.com/products').then(res => res.json()).then(data => setProducts(data))
     }, [])
 
     const navigate = useNavigate();
@@ -18,7 +18,7 @@ const ManageInventory = () => {
         const proceed = window.confirm('sure?');
         if (proceed) {
             console.log('deleting user with id, ', id);
-            const url = `http://localhost:5000/products/${id}`;
+            const url = `https://arcane-plateau-22519.herokuapp.com/products/${id}`;
             fetch(url, {
                 method: 'DELETE'
             })
