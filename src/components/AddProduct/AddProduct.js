@@ -5,7 +5,7 @@ import { useAuthState } from 'react-firebase-hooks/auth';
 import auth from '../../firebase.init';
 
 const AddProduct = () => {
-    // const { register, handleSubmit } = useForm();
+
     const nameRef = useRef('')
     const priceRef = useRef('')
     const supplierRef = useRef('')
@@ -13,7 +13,8 @@ const AddProduct = () => {
     const urlRef = useRef('')
     const desRef = useRef('')
     const [user, loading] = useAuthState(auth)
-    console.log(user)
+
+
     const onSubmit = event => {
         event.preventDefault();
         const name = nameRef.current.value;
@@ -45,6 +46,8 @@ const AddProduct = () => {
             })
 
     };
+
+
     return (
         <div className='w-50 mx-auto'>
             <Form onSubmit={onSubmit}>

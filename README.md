@@ -9,7 +9,7 @@ We store Your favourite laptops, mobiles and gadgets. We are working for our cus
 Open [https://warehouse-68196.web.app/](https://warehouse-68196.web.app/). to view it in your browser.
 
 ### Project Features
-- This is a inventory management website so you can manage your products here
+- This is a inventory management website so you can manage products here
 - You can login via mail,password and also through google
 - You can manage products like increase product quantity or even delete a product
 - You can add new products

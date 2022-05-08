@@ -1,12 +1,12 @@
-import { Button } from 'bootstrap';
 import React, { useEffect, useState } from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import auth from '../../firebase.init';
 import './Myitems.css'
 
 const Myitems = () => {
-
+    //fetching data for products
     const [products, setProducts] = useState([])
+
     useEffect(() => {
         fetch('https://arcane-plateau-22519.herokuapp.com/products').then(res => res.json()).then(data => setProducts(data))
     }, [])
@@ -17,6 +17,7 @@ const Myitems = () => {
     console.log(email)
     const [items, setItems] = useState([])
 
+    // fetching item data
     useEffect(() => {
 
         fetch(`https://arcane-plateau-22519.herokuapp.com/products?email=${email}`).then(res => res.json()).then(data => { setItems(data); console.log(data) })
@@ -46,8 +47,8 @@ const Myitems = () => {
         }
     }
     return (
-        <div>
-            <h1 className='text-danger'>Your added products : </h1>
+        <div style={{ minHeight: '100vh' }}>
+            <h1 className='text-danger'>Your added products are shown below </h1>
             {
 
                 items.map(item =>
@@ -66,6 +67,8 @@ const Myitems = () => {
                         </div> : ''
                 )
             }
+
+
 
         </div>
     );

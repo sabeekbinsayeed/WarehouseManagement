@@ -12,6 +12,8 @@ const DetailInventory = () => {
     const handleNavigateManage = () => {
         Navigate('/manageinventories');
     }
+
+
     useEffect(() => {
         const url = `https://arcane-plateau-22519.herokuapp.com/products/${productId}`
         fetch(url).then(res => res.json()).then(data => {
@@ -38,6 +40,8 @@ const DetailInventory = () => {
 
     }
 
+
+    // handle deliver items
     const handleNumber = (updatedProducts, quantity) => {
         const url = `https://arcane-plateau-22519.herokuapp.com/products/${pdetail._id}`;
         console.log(url)
