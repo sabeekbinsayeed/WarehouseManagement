@@ -4,14 +4,9 @@ We store Your favourite laptops, mobiles and gadgets. We are working for our cus
 
 
 
-## Available Scripts
+## Site Link
 
-In the project directory, you can run:
-
-
-
-Runs the app in the development mode.
-Open [site link ](https://warehouse-68196.web.app/). to view it in your browser.
+Open [https://warehouse-68196.web.app/](https://warehouse-68196.web.app/). to view it in your browser.
 
 ### Project Features
 - This is a inventory management website so you can manage your products here
