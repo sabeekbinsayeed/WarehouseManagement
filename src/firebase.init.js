@@ -12,6 +12,7 @@ const firebaseConfig = {
     storageBucket: "warehouse-68196.appspot.com",
     messagingSenderId: "519054096006",
     appId: "1:519054096006:web:1380aeb36104f2188ec307"
+
     // apiKey: process.env.REACT_APP_apiKey,
     // authDomain: process.env.REACT_APP_authDomain,
     // projectId: process.env.REACT_APP_projectId,
@@ -26,3 +27,10 @@ const app = initializeApp(firebaseConfig);
 const auth = getAuth(app)
 
 export default auth;
+
+// REACT_APP_apiKey=AIzaSyDOEOiM9bJ7gH6KoDs9G5Ski_QWCv0aN1U
+// REACT_APP_authDomain= warehouse-68196.firebaseapp.com
+// REACT_APP_projectId= warehouse-68196,
+// REACT_APP_storageBucket= warehouse-68196.appspot.com,
+// REACT_APP_messagingSenderId= 519054096006,
+// REACT_APP_appId= 1:519054096006:web:1380aeb36104f2188ec307

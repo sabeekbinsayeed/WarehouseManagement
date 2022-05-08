@@ -29,13 +29,12 @@ const Social = () => {
     }
     return (
         <div>
-            <div className='d-flex align-items-center'>
-                <div className='w-50 bg-primary' style={{ height: '1px' }} ></div>
-                <p className='mx-2 mt-2'>or</p>
-                <div className='w-50 bg-primary' style={{ height: '1px' }} ></div>
+            <div className=''>
+                <h3 className='text-danger text-center mb-3'>OR <br></br> </h3>
+
             </div>
             <div className='  '>
-                <button onClick={handleGoogle} className='btn btn-info w-50  d-block mx-auto my-2'>
+                <button onClick={handleGoogle} className='btn btn-danger text-white w-50  d-block mx-auto my-2'>
                     <img src={google} width={'30px'} alt="" />
                     <span style={{ color: 'white', marginLeft: '10px' }}>google sign in</span>
                 </button>

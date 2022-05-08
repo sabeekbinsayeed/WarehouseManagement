@@ -27,7 +27,7 @@ const Register = () => {
     const [agree, setAgree] = useState(false)
 
     const navigateLogin = () => {
-        navigate('/login');
+        navigate('/');
     }
 
     // if (user) {
@@ -56,7 +56,7 @@ const Register = () => {
 
         await createUserWithEmailAndPassword(email, password);
         await updateProfile({ displayName: name });
-        alert('Updated profile');
+        alert('Done successfully');
         navigate('/login')
 
 
@@ -68,13 +68,13 @@ const Register = () => {
         <div style={{ minHeight: '100vh' }} >
             <h2 style={{ textAlign: 'center', marginBottom: '60px', color: 'black', marginTop: '20px' }}>Please <span className='text-danger'>Register</span></h2>
 
-            <div className='d-flex ps-5 ms-3'>
-                <div className='half'>
+            <div className='grids mx-auto'>
+                <div className=''>
                     <img src={img}></img>
 
                 </div>
 
-                <div className=' half register-form me-5 pe-5' style={{ marginTop: '70px' }}>
+                <div className='  register-form ' style={{ marginTop: '30px' }}>
                     <form onSubmit={handleRegister}>
                         <input type="text" name="name" id="" placeholder='Your Name' required />
 
@@ -91,9 +91,9 @@ const Register = () => {
                             Register
                         </Button>
                     </form>
-                    <p>Already have an account? <Link to="/login" className='text-danger pe-auto text-decoration-none' onClick={navigateLogin}>Please Login</Link> </p>
+                    <p className='text-danger'>Already have an account? <Link to="/login" className='text-danger pe-auto text-decoration-none' onClick={navigateLogin}>Login</Link> </p>
                     {/* <ToastContainer /> */}
-                    <p className=' bg-danger'>{errorElement}</p>
+                    <p className=' text-danger'>{errorElement}</p>
                 </div>
 
             </div>

@@ -5,6 +5,7 @@ import { useAuthState } from 'react-firebase-hooks/auth';
 import { Link } from 'react-router-dom';
 import auth from '../../firebase.init';
 import logo from '../../images/logo.PNG'
+import './Header.css'
 const Header = () => {
     const [user] = useAuthState(auth);
     console.log(user)
@@ -22,29 +23,33 @@ const Header = () => {
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                     <Navbar.Collapse id="responsive-navbar-nav">
                         <Nav className="me-auto">
-                            <Nav.Link style={{ color: ' black' }} href="blogs"><strong>blogs</strong></Nav.Link>
-                            <Nav.Link style={{ color: ' #ff4444' }} href="home#experts">Experts</Nav.Link>
+                            <Nav.Link style={{ color: ' white' }} as={Link} to="blogs">Blogs</Nav.Link>
+
+                            {user && <Nav.Link style={{ color: ' white' }} as={Link} to="manageinventories">Manage Items</Nav.Link>}
+                            {/* <Nav.Link style={{ color: ' white' }} href="blogs">Blogs</Nav.Link>
+                            {user && <Nav.Link style={{ color: ' white' }} href="manageinventories">Manage Items</Nav.Link>} */}
+
 
                         </Nav>
                         <Nav>
 
                             {
                                 user && <>
-                                    <Nav.Link as={Link} to="manageinventories">Manage Items</Nav.Link>
-                                    <Nav.Link as={Link} to="myitems">My items</Nav.Link>
-                                    <Nav.Link as={Link} to="addproduct">Add Items</Nav.Link>
+
+                                    <Nav.Link style={{ color: ' white' }} as={Link} to="myitems">My items</Nav.Link>
+                                    <Nav.Link style={{ color: ' white' }} as={Link} to="addproduct">Add Items</Nav.Link>
 
                                 </>
                             }
                             {user ?
                                 <button style={{ color: ' #ff4444' }} onClick={handleSignOut}>sign out</button>
-                                : <Nav.Link style={{ color: ' #ff4444' }} as={Link} to="login">
+                                : <Nav.Link style={{ color: ' white' }} as={Link} to="login">
                                     Login
                                 </Nav.Link>}
                         </Nav>
                         {
                             user ?
-                                <h5>{user.email}</h5> : ''}
+                                <h5 className='d-flex justify-content-center align-items-center ms-2 text-white'> {user.email} </h5> : ''}
                     </Navbar.Collapse>
                 </Container>
             </Navbar>

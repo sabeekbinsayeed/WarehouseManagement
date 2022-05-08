@@ -1,15 +1,25 @@
 import React, { useEffect, useState, useSyncExternalStore } from 'react';
+import { useNavigate } from 'react-router-dom';
+
 import Loading from '../Loading/Loading';
 import Product from '../Product/Product';
 import './Products.css'
 
 const Products = () => {
     const [products, setProducts] = useState([])
+    const navigate = useNavigate('');
+    // https://arcane-plateau-22519.herokuapp.com/products
     useEffect(() => {
         fetch('https://arcane-plateau-22519.herokuapp.com/products').then(res => res.json()).then(data => setProducts(data))
     }, [])
     if (products.length === 0) {
         return <Loading></Loading>
+    }
+    // const navigate = useNavigate('');
+
+
+    const handleNavigate = () => {
+        navigate(`/manageinventories`)
     }
     return (
         <div>
@@ -19,7 +29,11 @@ const Products = () => {
                     products.slice(0, 6).map(product => <Product key={product._id} product={product}></Product>)
                 }
             </div>
-        </div>
+            {/* <button className='ware-button w-50 mx-auto mb-5 pb-4' onClick={() => { handleNavigate() }}><p>Manage Inventories</p></button> */}
+
+            <button className='ware-button w-50 mx-auto bg-danger text-white' onClick={handleNavigate}>Manage Inventories</button>
+
+        </div >
     );
 };
 

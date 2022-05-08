@@ -1,0 +1,13 @@
+ware-button {
+
+    Width: 100%;
+    text-align: center;
+}
+
+.ware-button-manage {}
+
+.ware-button:hover {
+
+    background-color: #ff4444;
+
+}

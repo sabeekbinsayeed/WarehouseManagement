@@ -2,7 +2,7 @@ import { Button } from 'react-bootstrap';
 import React, { useEffect, useRef, useState } from 'react';
 import { Form } from 'react-bootstrap';
 import { Navigate, useNavigate, useParams } from 'react-router-dom';
-
+import './DetailInventory.css'
 const DetailInventory = () => {
     const { productId } = useParams();
     const [pdetail, setPdetail] = useState([])
@@ -51,7 +51,7 @@ const DetailInventory = () => {
             .then(res => res.json())
             .then(data => {
                 console.log('success', data);
-                alert('users added successfully!!!');
+                alert('successfully done!!!');
                 setQuantity(quantity)
                 console.log(quantity)
                 pdetail.quantity = quantity;
@@ -75,48 +75,42 @@ const DetailInventory = () => {
     }
     return (
         <div >
-            <h1>Product Details Information </h1>
+            <h1 className='text-danger mb-5'>Product Details Information </h1>
 
-            <div className='d-flex' style={{ width: '80%', margin: 'auto', paddingTop: '30px' }}>
-                <div>
-                    <img style={{ width: '500px' }} src={pdetail.img}></img>
+            <div className='grids w-100 ' >
+                <div >
+                    <img className='image' src={pdetail.img}></img>
                 </div>
 
-                <div style={{ width: '400px', border: '2px solid black;', marginLeft: '100px' }}>
+                <div className='px-5 mx-4'>
                     <h1 className='text-danger'>{pdetail.name}</h1>
                     <h3>{pdetail.suplier}</h3>
-                    <h5>Price : {pdetail.price} Tk</h5>
-                    <h5>Quantity: {pdetail.quantity}</h5>
+                    <h5 className='text-danger'>Price : {pdetail.price} Tk</h5>
+                    <h5 className='text-dark'>Quantity: {pdetail.quantity}</h5>
+                    <h5>{pdetail.quantity === 0 ? 'sold' : 'unsold'}</h5>
                     <p>{pdetail.description}</p>
                     <button className='ware-button' onClick={() => handleUpdate({ pdetail })}>Delivered</button>
+                    <h3 className='text-danger mt-4 pt-2'>Stock Quantities Form</h3>
+                    <Form onSubmit={handleSubmit}>
+                        <Form.Group className="mb-3" controlId="formBasicEmail">
+                            <Form.Label className='text-danger'>Input stock</Form.Label>
+                            <Form.Control ref={stockRef} type="text" placeholder="Enter stock" />
 
+                        </Form.Group>
+
+                        <Button className='ware-button' variant=" w-50 mx-auto d-block mb-2 border" type="submit">
+                            Add new quantity
+                        </Button>
+                    </Form>
+
+                    <Button onClick={handleNavigateManage} variant="danger w-100 mx-auto d-block mb-2 border" >
+                        Manage Inventories
+                    </Button>
 
                 </div>
             </div>
 
 
-
-
-            <div className='mx-auto w-50 ' style={{ border: '2px solid red', padding: '60px', margin: '30px' }}>
-                <h3 className='text-danger'>Stock Quantities Form</h3>
-                <Form onSubmit={handleSubmit}>
-                    <Form.Group className="mb-3" controlId="formBasicEmail">
-                        <Form.Label className='text-danger'>Input stock</Form.Label>
-                        <Form.Control ref={stockRef} type="text" placeholder="Enter stock" />
-
-                    </Form.Group>
-
-                    <Button className='ware-button' variant=" w-50 mx-auto d-block mb-2 border" type="submit">
-                        Add new quantity
-                    </Button>
-                </Form>
-            </div>
-
-            {/* <button className='ware-button' onClick={handleNavigateManage}>manage inventories</button> */}
-
-            <Button onClick={handleNavigateManage} variant="danger w-50 mx-auto d-block mb-2 border" >
-                Manage Inventories
-            </Button>
         </div>
     );
 };

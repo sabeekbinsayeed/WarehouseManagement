@@ -1,18 +1,41 @@
-# Getting Started with Create React App
+# Tech Stocks
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+We store Your favourite laptops, mobiles and gadgets. We are working for our customers for more than 10 years. We store tech machines,instruments and gadgets. We also provide proper packeting.
+
+
 
 ## Available Scripts
 
 In the project directory, you can run:
 
+
+
+Runs the app in the development mode.
+Open [site link ](https://warehouse-68196.web.app/). to view it in your browser.
+
+### Project Features
+- This is a inventory management website so you can manage your products here
+- You can login via mail,password and also through google
+- You can manage products like increase product quantity or even delete a product
+- You can add new products
+- You can also see your added products in myitems page
+- In product details page you can see details of the products
+- All the data are stored in mongodb, so the data are not lost after refreshing
+- responsive , so it can also be used via mobile phones
+
+
+### Technology used
+- React
+- Firebase 
+- React router 
+- React bootstrap
+- React firebase hooks
+- Node
+- Express 
+- Mongodb
+
+
 ### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
 ### `npm test`
 

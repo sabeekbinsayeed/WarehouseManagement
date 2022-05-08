@@ -1,0 +1,75 @@
+[
+    {
+        "name": "HP SPECTRE X360",
+        "price": "30,000",
+        "quantity": "3",
+        "supplier": "HP",
+		"sold":"1",
+        "description": "Windows 11 Home11th Generation Intel® Core™ i7 processorIntel® Iris® Xᵉ Graphics16 GB memory; 512 GB SSD storage16, diagonal 3K+ touch display",
+        "img": "https://images.unsplash.com/photo-1603302576837-37561b2e2302?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTN8fGxhcHRvcHxlbnwwfHwwfHw%3D&w=1000&q=80"
+    },
+    {
+        "name": "Vivo Mobile",
+        "price": "10000",
+        "quantity": "2",
+        "supplier": "vivo",
+        "description": "Lorem ipsum dolor sit amet, consectetu radipisi cing elitBeatae autem aperiam nequ quaera molestias voluptatibus harum ametipsa.",
+        "img": "https://images.unsplash.com/photo-1603302576837-37561b2e2302?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTN8fGxhcHRvcHxlbnwwfHwwfHw%3D&w=1000&q=80"
+    },
+    {
+        "name": "Lenovo Laptop",
+        "price": "2000",
+        "quantity": "4",
+        "supplier": "Lenovo",
+        "description": "Lorem ipsum dolor sit amet, consectetu radipisi cing elitBeatae autem aperiam nequ quaera molestias voluptatibus harum ametipsa.",
+        "img": "https://images.unsplash.com/photo-1544099858-75feeb57f01b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8bGFwdG9wc3xlbnwwfHwwfHw%3D&w=1000&q=80"
+    },
+    {
+        "name": "Xiomi 9 pro",
+        "price": "2000",
+        "quantity": "3",
+        "supplier": "Xuinu",
+        "description": "Lorem ipsum dolor sit amet, consectetu radipisi cing elitBeatae autem aperiam nequ quaera molestias voluptatibus harum ametipsa.",
+        "img": "https://images.unsplash.com/photo-1544099858-75feeb57f01b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8bGFwdG9wc3xlbnwwfHwwfHw%3D&w=1000&q=80"
+    },
+    {
+        "name": "Headphone",
+        "price": "100",
+        "quantity": "3",
+        "supplier": "Phe",
+        "description": "Lorem ipsum dolor sit amet, consectetu radipisi cing elitBeatae autem aperiam nequ quaera molestias voluptatibus harum ametipsa.",
+        "img": "https://images.unsplash.com/photo-1544099858-75feeb57f01b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8bGFwdG9wc3xlbnwwfHwwfHw%3D&w=1000&q=80"
+    },
+    {
+        "name": "Tablet",
+        "price": "300",
+        "quantity": "35",
+        "supplier": "Samsung",
+        "description": "Lorem ipsum dolor sit amet, consectetu radipisi cing elitBeatae autem aperiam nequ quaera molestias voluptatibus harum ametipsa",
+        "img": "https://images.unsplash.com/photo-1544099858-75feeb57f01b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8bGFwdG9wc3xlbnwwfHwwfHw%3D&w=1000&q=80"
+    },
+    {
+        "name": "Tablet2",
+        "price": "300",
+        "quantity": "35",
+        "supplier": "Samsung",
+        "description": "Lorem ipsum dolor sit amet, consectetu radipisi cing elitBeatae autem aperiam nequ quaera molestias voluptatibus harum ametipsa",
+        "img": "https://images.unsplash.com/photo-1544099858-75feeb57f01b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8bGFwdG9wc3xlbnwwfHwwfHw%3D&w=1000&q=80"
+    },
+    {
+        "name": "Tablet3",
+        "price": "300",
+        "quantity": "35",
+        "supplier": "Samsung",
+        "description": "Lorem ipsum dolor sit amet, consectetu radipisi cing elitBeatae autem aperiam nequ quaera molestias voluptatibus harum ametipsa",
+        "img": "https://images.unsplash.com/photo-1544099858-75feeb57f01b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8bGFwdG9wc3xlbnwwfHwwfHw%3D&w=1000&q=80"
+    },
+    {
+        "name": "Tablet3",
+        "price": "300",
+        "quantity": "35",
+        "supplier": "Samsung",
+        "description": "Lorem ipsum dolor sit amet, consectetu radipisi cing elitBeatae autem aperiam nequ quaera molestias voluptatibus harum ametipsa",
+        "img": "https://images.unsplash.com/photo-1544099858-75feeb57f01b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8bGFwdG9wc3xlbnwwfHwwfHw%3D&w=1000&q=80"
+    }
+]

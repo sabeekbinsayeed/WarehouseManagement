@@ -9,6 +9,7 @@ import { useSendPasswordResetEmail } from 'react-firebase-hooks/auth';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Loading from '../Loading/Loading';
+import './Login.css'
 
 import Social from '../Social/Social';
 const Login = () => {
@@ -61,30 +62,34 @@ const Login = () => {
         navigate(from, { replace: true })
     }
     return (
-        <div style={{ minHeight: '100vh' }} className='mx-auto w-50 container'>
-            <h1 className=' text-center' style={{ color: 'black' }}>Please<span className='text-danger'> Login</span></h1>
-            <Form onSubmit={handleSubmit} >
-                <Form.Group className="mb-3" controlId="formBasicEmail">
-                    <Form.Label className='text-danger' style={{ color: '#ff4444', fontWeight: '500' }}>Email address</Form.Label>
-                    <Form.Control ref={emailRef} type="email" placeholder="Enter email" required />
 
-                </Form.Group>
+        <div style={{ minHeight: '100vh' }} className='main'>
+            <div className='border-login bg-white '>
+                <h1 className=' text-center text-danger' >Please<span className='text-danger'> Login</span></h1>
+                <Form onSubmit={handleSubmit} >
+                    <Form.Group className="mb-3" controlId="formBasicEmail">
+                        <Form.Label className='text-danger' style={{ color: '#ff4444', fontWeight: '500' }}>Email address</Form.Label>
+                        <Form.Control ref={emailRef} type="email" placeholder="Enter email" required />
 
-                <Form.Group className="text-danger " controlId="formBasicPassword">
-                    <Form.Label style={{ fontWeight: '500' }}><bold>Password</bold></Form.Label>
-                    <Form.Control ref={passRef} type="password" placeholder="Password" required />
-                </Form.Group>
+                    </Form.Group>
 
-                <Button style={{ backgroundColor: '#ff4444', color: 'white' }} variant=" w-50 mx-auto d-block mb-2 mt-2" type="submit">
-                    Login
-                </Button>
-            </Form>
-            <p>No account?<span onClick={navigateRegister} className='text-warning'>Please Register</span></p>
-            <p>Forget Password? <button className='btn btn-link text-warning pe-auto text-decoration-none' onClick={resetPassword}>Reset Password</button> </p>
-            {errorElement}
-            <Social></Social>
-            <ToastContainer />
-        </div>
+                    <Form.Group className="text-danger " controlId="formBasicPassword">
+                        <Form.Label style={{ fontWeight: '500' }}><bold>Password</bold></Form.Label>
+                        <Form.Control ref={passRef} type="password" placeholder="Password" required />
+                    </Form.Group>
+
+                    <Button style={{ backgroundColor: '#ff4444', color: 'white' }} variant=" w-50 mx-auto d-block mb-2 mt-2" type="submit">
+                        Login
+                    </Button>
+                </Form>
+                <p>No account?<span onClick={navigateRegister} className='text-danger'> Please Register</span></p>
+                <p>Forget Password? <button className='btn btn-link text-danger  text-decoration-none' onClick={resetPassword}>Reset Password</button> </p>
+                {errorElement}
+                <Social></Social>
+                <ToastContainer />
+            </div>
+        </div >
+
     );
 };
 

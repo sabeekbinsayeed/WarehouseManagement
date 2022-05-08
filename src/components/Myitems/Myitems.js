@@ -2,6 +2,7 @@ import { Button } from 'bootstrap';
 import React, { useEffect, useState } from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import auth from '../../firebase.init';
+import './Myitems.css'
 
 const Myitems = () => {
 
@@ -46,7 +47,7 @@ const Myitems = () => {
     }
     return (
         <div>
-            <h1 className='text-danger'>Your added products</h1>
+            <h1 className='text-danger'>Your added products : </h1>
             {
 
                 items.map(item =>
@@ -59,7 +60,7 @@ const Myitems = () => {
                                 <h5>supplier: {item.supplier}</h5>
                                 <p>quantity: {item.quantity}</p>
 
-                                <span>  <button onClick={() => handleDelete(item._id)} style={{ width: '30%' }}> delete</button></span>
+                                <span>  <button className='ware-button' onClick={() => handleDelete(item._id)} style={{ width: '30%' }}> delete</button></span>
 
                             </div>
                         </div> : ''

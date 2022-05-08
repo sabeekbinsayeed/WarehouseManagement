@@ -1,0 +1,27 @@
+.border-login {
+
+    padding: 30px;
+    margin-top: 30px;
+    width: 50%;
+    ;
+    margin: auto;
+
+}
+
+.main {}
+
+.background {
+    background-color: rgb(255, 38, 0, 0.2);
+}
+
+@media only screen and (max-width:668px) {
+    .border-login {
+
+        padding: 30px;
+        margin-top: 30px;
+        width: 100%;
+        ;
+        margin: auto;
+
+    }
+}

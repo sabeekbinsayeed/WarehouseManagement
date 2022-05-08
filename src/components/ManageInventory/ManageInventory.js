@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Button, Table } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
 import AllProduct from '../AllProduct/AllProduct';
+import Loading from '../Loading/Loading';
 
 const ManageInventory = () => {
     const [products, setProducts] = useState([])
@@ -33,6 +34,10 @@ const ManageInventory = () => {
         }
         else {
             console.log('else ')
+        }
+
+        if (products.length === 0) {
+            return <Loading></Loading>
         }
     }
     return (
@@ -69,8 +74,8 @@ const ManageInventory = () => {
             </Table>
             {/* <button onClick={handleNavigateAdd}>add products</button> */}
 
-            <Button onClick={handleNavigateAdd} type="submit" variant="danger w-50 mx-auto d-block mb-2 border" >
-                Add
+            <Button onClick={handleNavigateAdd} type="submit" variant="danger w-50 mx-auto d-block mb-2 border " >
+                Add Items? Go to our add new item page
             </Button>
 
 

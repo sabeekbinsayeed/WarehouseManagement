@@ -4,7 +4,64 @@
 
 }
 
+
+
+
+.image {
+
+    width: 90%;
+    margin-left: 10%;
+}
+
+.grids {
+
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+
+}
+
 .about:hover {
 
     color: black;
+}
+
+.info-div {
+    width: 80%;
+    margin-right: auto;
+    padding-left: 30px;
+}
+
+p {
+    text-align: justify;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 30px
+}
+
+@media only screen and (max-width:668px) {
+
+
+    .grids {
+
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+
+        width: 80%;
+    }
+
+    .image {
+
+        width: 90%;
+        margin-left: auto;
+    }
+
+    .info-div {
+        width: 80%;
+        padding-right: 10px;
+        padding-left: 10px;
+        margin: auto;
+        margin-top: 30px;
+    }
 }

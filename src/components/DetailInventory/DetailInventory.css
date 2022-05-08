@@ -7,8 +7,27 @@
 
 }
 
+.image {}
+
 .ware-button:hover {
 
     background-color: #ff4444;
     color: white
+}
+
+.grids {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+@media only screen and (max-width:668px) {
+    .grids {
+        grid-template-columns: repeat(1, 1fr);
+
+    }
+
+    .image {
+        width: 400px
+    }
+
 }

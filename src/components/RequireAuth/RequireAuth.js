@@ -19,12 +19,13 @@ const RequireAuth = ({ children }) => {
     }
     console.log(user)
     // user.providerData[0].providerId === 'password' && 
-    if (user.providerData[0]?.providerId === 'password' && !user.emailVerified) {
-        return <div>
-            <h2>please verify your email</h2>
-            <p>what is going on</p>
-        </div>
-    }
+
+    // if (user.providerData[0]?.providerId === 'password' && !user.emailVerified) {
+    //     return <div>
+    //         <h2>please verify your email</h2>
+    //      
+    //     </div>
+    // }
 
     //const { user } = useFirebase();
 

@@ -1,9 +1,25 @@
-.one-third {
-    width: 33%;
-
-    padding: 20px;
-}
-
 .font {
     font-size: 40px;
+}
+
+.grid-stats {
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+p {
+    text-align: center;
+}
+
+@media only screen and (max-width:668px) {
+    .grid-stats {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .font {
+        font-size: 30px;
+    }
+
 }

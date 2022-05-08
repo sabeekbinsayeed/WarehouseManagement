@@ -19,22 +19,27 @@
 
 }
 
+.btn-container {
+
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+}
+
 .product-details {
     padding-left: 15px;
     padding-right: 15px;
 }
 
 .ware-button {
-    padding-right: 30px;
-    padding-left: 30px;
-    Width: 100%;
-    Height:
-        48px;
 
+    Width: 100%;
+    text-align: center;
 }
+
 
 .ware-button:hover {
 
     background-color: #ff4444;
-    color: white
+
 }
