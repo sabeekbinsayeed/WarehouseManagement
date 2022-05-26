@@ -22,8 +22,8 @@ const Products = () => {
         navigate(`/manageinventories`)
     }
     return (
-        <div>
-            <h1 className='text-danger text-center'>Our Items</h1>
+        <div className='my-3 py-3'>
+            <h1 className='text-danger text-center mt-3 '>Our Items</h1>
             <div className='product-container'>
                 {
                     products.slice(0, 6).map(product => <Product key={product._id} product={product}></Product>)
