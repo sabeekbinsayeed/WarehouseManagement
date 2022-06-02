@@ -29,7 +29,7 @@ const AllProduct = props => {
         }
     }
     return (
-        // showing data using table
+
         <tr>
             <td>{name}</td>
             <td>{quantity}</td>

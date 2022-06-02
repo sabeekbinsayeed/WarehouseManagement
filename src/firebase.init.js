@@ -6,19 +6,19 @@ import { getAuth } from "firebase/auth";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-    // apiKey: "AIzaSyDOEOiM9bJ7gH6KoDs9G5Ski_QWCv0aN1U",
-    // authDomain: "warehouse-68196.firebaseapp.com",
-    // projectId: "warehouse-68196",
-    // storageBucket: "warehouse-68196.appspot.com",
-    // messagingSenderId: "519054096006",
-    // appId: "1:519054096006:web:1380aeb36104f2188ec307"
+    apiKey: "AIzaSyDOEOiM9bJ7gH6KoDs9G5Ski_QWCv0aN1U",
+    authDomain: "warehouse-68196.firebaseapp.com",
+    projectId: "warehouse-68196",
+    storageBucket: "warehouse-68196.appspot.com",
+    messagingSenderId: "519054096006",
+    appId: "1:519054096006:web:1380aeb36104f2188ec307"
 
-    apiKey: process.env.REACT_APP_apiKey,
-    authDomain: process.env.REACT_APP_authDomain,
-    projectId: process.env.REACT_APP_projectId,
-    storageBucket: process.env.REACT_APP_storageBucket,
-    messagingSenderId: process.env.REACT_APP_messagingSenderId,
-    appId: process.env.REACT_APP_appId
+    // apiKey: process.env.REACT_APP_apiKey,
+    // authDomain: process.env.REACT_APP_authDomain,
+    // projectId: process.env.REACT_APP_projectId,
+    // storageBucket: process.env.REACT_APP_storageBucket,
+    // messagingSenderId: process.env.REACT_APP_messagingSenderId,
+    // appId: process.env.REACT_APP_appId
 };
 
 // Initialize Firebase
