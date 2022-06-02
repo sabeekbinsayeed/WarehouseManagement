@@ -25,7 +25,7 @@ const AllProduct = props => {
                 })
         }
         else {
-            console.log('else ')
+            console.log('else .. ')
         }
     }
     return (
