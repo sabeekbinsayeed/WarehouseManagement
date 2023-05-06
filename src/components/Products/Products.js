@@ -8,9 +8,10 @@ import './Products.css'
 const Products = () => {
     const [products, setProducts] = useState([])
     const navigate = useNavigate('');
-    // https://arcane-plateau-22519.herokuapp.com/products
+    //https://warehouse-new-vercel.vercel.app/
+    // https://warehouse-new-vercel.vercel.app/products
     useEffect(() => {
-        fetch('https://arcane-plateau-22519.herokuapp.com/products').then(res => res.json()).then(data => setProducts(data))
+        fetch('https://warehouse-new-vercel.vercel.app/products').then(res => res.json()).then(data => setProducts(data))
     }, [])
     if (products.length === 0) {
         return <Loading></Loading>

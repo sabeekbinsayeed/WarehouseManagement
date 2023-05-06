@@ -30,7 +30,7 @@ const AddProduct = () => {
 
         console.log(data)
         // send data to the server
-        fetch('https://arcane-plateau-22519.herokuapp.com/products/', {
+        fetch('https://warehouse-new-vercel.vercel.app/products/', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

@@ -5,13 +5,13 @@ const AllProduct = props => {
     const { name, price, img, quantity, supplier, _id } = props.product;
     const [products, setProducts] = useState([])
     useEffect(() => {
-        fetch('https://arcane-plateau-22519.herokuapp.com/products').then(res => res.json()).then(data => setProducts(data))
+        fetch('https://warehouse-new-vercel.vercel.app/products').then(res => res.json()).then(data => setProducts(data))
     }, [])
     const handleDelete = id => {
         const proceed = window.confirm('sure?');
         if (proceed) {
             console.log('deleting user with id, ', id);
-            const url = `https://arcane-plateau-22519.herokuapp.com/products/${id}`;
+            const url = `https://warehouse-new-vercel.vercel.app/products/${id}`;
             fetch(url, {
                 method: 'DELETE'
             })

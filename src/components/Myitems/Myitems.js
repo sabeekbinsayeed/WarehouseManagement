@@ -5,11 +5,9 @@ import './Myitems.css'
 
 const Myitems = () => {
     //fetching data for products
-    const [products, setProducts] = useState([])
 
-    useEffect(() => {
-        fetch('https://arcane-plateau-22519.herokuapp.com/products').then(res => res.json()).then(data => setProducts(data))
-    }, [])
+
+
 
 
     const [user] = useAuthState(auth)
@@ -20,14 +18,14 @@ const Myitems = () => {
     // fetching item data
     useEffect(() => {
 
-        fetch(`https://arcane-plateau-22519.herokuapp.com/products?email=${email}`).then(res => res.json()).then(data => { setItems(data); console.log(data) })
+        fetch(`https://warehouse-new-vercel.vercel.app/products?email=${email}`).then(res => res.json()).then(data => { setItems(data); console.log(data) })
     }, [])
 
     const handleDelete = id => {
         const proceed = window.confirm('sure?');
         if (proceed) {
             console.log('deleting user with id, ', id);
-            const url = `https://arcane-plateau-22519.herokuapp.com/products/${id}`;
+            const url = `https://warehouse-new-vercel.vercel.app/products/${id}`;
             fetch(url, {
                 method: 'DELETE'
             })
@@ -35,9 +33,9 @@ const Myitems = () => {
                 .then(data => {
                     if (data.deletedCount > 0) {
                         console.log('deleted');
-                        const remaining = products.filter(u => u._id !== id);
+
                         const remaining1 = items.filter(u => u._id !== id);
-                        setProducts(remaining);
+
                         setItems(remaining1)
                     }
                 })
@@ -52,19 +50,19 @@ const Myitems = () => {
             {
 
                 items.map(item =>
-                    item.email === email ?
-                        <div>
 
-                            <div className='w-50 mx-auto p-3 m-3' style={{ border: '2px solid red' }}>
-                                <h3>product name: {item.name}  </h3>
+                    <div>
 
-                                <h5>supplier: {item.supplier}</h5>
-                                <p>quantity: {item.quantity}</p>
+                        <div className='w-50 mx-auto p-3 m-3' style={{ border: '2px solid red' }}>
+                            <h3>product name: {item.name}  </h3>
 
-                                <span>  <button className='ware-button' onClick={() => handleDelete(item._id)} style={{ width: '30%' }}> delete</button></span>
+                            <h5>supplier: {item.supplier}</h5>
+                            <p>quantity: {item.quantity}</p>
 
-                            </div>
-                        </div> : ''
+                            <span>  <button className='ware-button' onClick={() => handleDelete(item._id)} style={{ width: '30%' }}> delete</button></span>
+
+                        </div>
+                    </div>
                 )
             }
 

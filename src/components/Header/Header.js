@@ -23,7 +23,7 @@ const Header = () => {
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                     <Navbar.Collapse id="responsive-navbar-nav">
                         <Nav className="me-auto">
-                            <Nav.Link style={{ color: ' white' }} as={Link} to="blogs">Blogs</Nav.Link>
+                            {/* <Nav.Link style={{ color: ' white' }} as={Link} to="blogs">Blogs</Nav.Link> */}
 
                             {user && <Nav.Link style={{ color: ' white' }} as={Link} to="manageinventories">Manage Items</Nav.Link>}
                             {/* <Nav.Link style={{ color: ' white' }} href="blogs">Blogs</Nav.Link>
